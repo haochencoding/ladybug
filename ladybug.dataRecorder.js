@@ -1,3 +1,4 @@
+{
 let event = "connectAllData";
 Bangle.setCompassPower(1);
 
@@ -75,3 +76,4 @@ if (buffer.data.length === 0) {
 }
 
 module.exports = recorder;
+}
