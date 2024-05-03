@@ -34,8 +34,7 @@ const computeBufferAverage = () => {
   return {mean: mean, std: std};
 };
 
-const recorder = () => {
-Bangle.on('HRM-raw', function(hrm) {
+const recorder = (hrm) => {
   var hrmRaw = [
     "HRM:",
     hrm.raw,
@@ -73,7 +72,6 @@ if (buffer.data.length === 0) {
     allData.write("\n");
     buffer.data = [];
   }
-});
-};
+}
 
 module.exports = recorder;
