@@ -1,6 +1,4 @@
-let settings = {
-  recording: false
-};
+let settings = require("Storage").readJSON("ladybug.settings.json",1)
 
 const recorder = require('ladybug.recorder.js');
 
@@ -13,6 +11,7 @@ function showMenu() {
           onchange: v => {
               settings.recording = v; // Set recording to the new value (v)
               console.log(`Recording status: ${settings.recording}`); // Output the current recording state to console
+              require("Storage").writeJSON("ladybug.settings.json", settings); // Write the setting into the json
               if (settings.recording) {
                 Bangle.setHRMPower(1);
                 Bangle.setCompassPower(1);
