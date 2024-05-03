@@ -34,6 +34,7 @@ const computeBufferAverage = () => {
   return {mean: mean, std: std};
 };
 
+const recorder = () => {
 Bangle.on('HRM-raw', function(hrm) {
   var hrmRaw = [
     "HRM:",
@@ -73,8 +74,6 @@ if (buffer.data.length === 0) {
     buffer.data = [];
   }
 });
-Bangle.setLCDBrightness(0.1);
-g.setBgColor(0,0,0);
-g.clear();
-Bangle.loadWidgets();
-Bangle.drawWidgets();
+};
+
+module.exports = recorder;
