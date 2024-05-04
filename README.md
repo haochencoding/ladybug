@@ -1,10 +1,22 @@
 # Introduction
-This repository contains the source code for a smart watch app - ladybug (version 2) on Bangle.js2. The app is improved based on the original ladybug app (i.e., ladybugv1.app.js), built by [rajeevmsn](https://github.com/rajeevmsn). 
+This repository contains the source code for a smart watch app - ladybug. The app is built to collect heart rate and movement data using Bangle.js2. The version 1 is built by [rajeevmsn](https://github.com/rajeevmsn), and the version 2 is improved by [haochencoding](https://github.com/haochencoding). 
 
-This version turns the original app into a widget, so it can collect heart rate and movement data in the background. This improvement allows users to run other apps while doing data collection. 
+The version 1 app does not have user interface, which provide minimal distractions for the users. 
+
+The version 2 app is a widget, and it collects heart rate and movement data in the background. This improvement allows users to run other apps while doing data collection. 
 
 # How to use 
-Upload following files to Bangle.js:
+
+## Version 1
+Upload following files of version1 folder to Bangle.js:
+- ladybug.app.js
+- ladybug.img
+- ladybug.info
+
+After uploading, please load the ladybug app on the app laucher on the watch.
+
+## Version 2
+Upload following files of version2 folder to Bangle.js:
 - ladybug.app.js
 - ladybug.dataRecorder.js
 - ladybug.img
@@ -12,4 +24,4 @@ Upload following files to Bangle.js:
 - ladybug.settings.json
 - ladybug.wid.js
 
-Load the ladybug app on the app laucher.
+After uploading, please load the ladybug app on the app laucher on the watch.
