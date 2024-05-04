@@ -1,9 +1,7 @@
 {
 let event = "connectAllData";
-Bangle.setCompassPower(1);
 
 var allData = require("Storage").open(event+".csv", "a");
-Bangle.setHRMPower(1);
 
 const buffer = {
   start: null,
