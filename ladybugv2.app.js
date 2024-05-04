@@ -1,5 +1,4 @@
-{
-let settings = require("Storage").readJSON("ladybug.settings.json",1)
+let settings = require("Storage").readJSON("ladybug.settings.json",1);
 
 const recorder = require('ladybug.dataRecorder.js');
 
@@ -32,4 +31,3 @@ g.clear();
 Bangle.loadWidgets();
 Bangle.drawWidgets();
 showMenu();  // Show the menu when the app starts
-}
