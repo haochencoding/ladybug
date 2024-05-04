@@ -5,7 +5,7 @@ const recorder = require('ladybug.dataRecorder.js');
 function showMenu() {
   const menu = {
       '': { 'title': 'Ladybug' },
-      '< Back': () => { load(); },  // Assuming 'load' is a function that handles the back action
+      '< Back': () => { load(); },
       'RECORD': {
           value: !!settings.recording,  // Convert the boolean to its boolean representation explicitly
           onchange: v => {
@@ -18,9 +18,12 @@ function showMenu() {
                 Bangle.on('HRM-raw', recorder);
               } else {
                 Bangle.setHRMPower(0);
-                Bangle.setCompassPower(1);
+                Bangle.setCompassPower(0);
                 Bangle.removeListener('HRM-raw', recorder);
-              }   
+              }
+              if (WIDGETS["ladybug"]) {
+                WIDGETS["ladybug"].reload(); // Reload the widget to reflect changes
+              }
           }
       }
   };
