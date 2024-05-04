@@ -9,9 +9,9 @@
     area: "tl",
     width: 24,
     draw: function() {
-      g.reset(); // reset the graphics context to defaults (color/font/etc)
       if (settings.recording) {
-        g.drawImage(icon, this.x+6, this.y);
+        g.reset().clearRect(this.x, this.y, this.x + this.width, this.y + 24); // Clear background
+        g.drawImage(icon, this.x, this.y); // Draw widget
         Bangle.on('HRM-raw', recorder);
         Bangle.setHRMPower(1, 'ladybug');
         Bangle.setCompassPower(1, 'ladybug');
