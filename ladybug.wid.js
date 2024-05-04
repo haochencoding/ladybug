@@ -1,6 +1,6 @@
 (() => {
   // Load settings, dataRecorder module, and image
-  let settings = require("Storage").readJSON("ladybug.settings.json",1);
+  let settings = require("Storage").readJSON("ladybug.settings.json",1) || { "recording":false };
   const recorder = require("ladybug.dataRecorder.js");
   const icon = atob("GBiDAf//////////////////x/////////x////////////+P/////////wAP////////+AAB//////+P+AAB///////x+AAAP+P////wAJAJBx/////xAJAJIB///x/5IJBJIB///+OAJJBJJB////xAJIBIBIAP//xJJIBIJIP///xJBJBJJIP///xIBJAJIIP///xJJJABIAP///+BJIAJJIP//wABJABJJJ/////5JABJBBx////xAIBIAP/////+AIPIB///////+AOB////////////////w==");
 

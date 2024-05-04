@@ -1,4 +1,4 @@
-let settings = require("Storage").readJSON("ladybug.settings.json",1);
+let settings = require("Storage").readJSON("ladybug.settings.json",1) || { "recording":false };
 
 // The code below is commented out, so only widget is responsible for data recording
 // const recorder = require('ladybug.dataRecorder.js');
