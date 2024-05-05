@@ -32,6 +32,9 @@
 						settings.recording = !settings.recording; // Reset recording status
                         require("Storage").writeJSON("ladybug.settings.json", settings);
                         WIDGETS["ladybug"].reload(); // Reload the widget to reflect changes
+						// Lock and unlock Bangle to force refreshing clockinfo card
+						Bangle.setLocked(true);
+						Bangle.setLocked(false);
 					}
 				},
 				show: () => {},
