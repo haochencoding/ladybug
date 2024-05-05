@@ -10,7 +10,7 @@
     width: 24,
     draw: function() {
       if (settings.recording) {
-        g.reset().clearRect(this.x, this.y, this.x + this.width, this.y + 24); // Clear background
+        g.reset().clearRect(this.x, this.y, this.x + this.width, this.y+23); // Clear background
         g.drawImage(icon, this.x, this.y); // Draw widget
         Bangle.on('HRM-raw', recorder);
         Bangle.setHRMPower(1, 'ladybug');
