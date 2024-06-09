@@ -27,5 +27,8 @@ Upload following files of version2 folder to Bangle.js:
 
 After uploading, please load the ladybug app on the watch. Tick record to start recording.
 
+## Version 2.1
+Version ready to be published on Bangle.Js app store. Same functionality to version 2. 
+
 # Reference
-The version 2 app is built based on the source code from the Recorder Bangle app, see [GitHub link](https://github.com/espruino/BangleApps/tree/master/apps/recorder)
+The version 2 app is built based on the logic of the Recorder Bangle app, see [GitHub link](https://github.com/espruino/BangleApps/tree/master/apps/recorder)
